@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Crypto Market Tracker</title>
+    </head>
+    <body>
+        <h1>Crypto Market Tracker</h1>
+        <input type="text" id="search" placeholder="Search by name or symbol" onkeyup="filterData()">
+        <button onclick="fetchDataWithThen()">Fetch Data</button>
+        <button onclick="fetchDataWithAsync()">Fetch Data (Async/Await)</button>
+        <button onclick="sortData('market_cap')">Sort by Market Cap</button>
+        <button onclick="sortData('price_change')">Sort by % Change</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Current Price</th>
+                    <th>Market Cap</th>
+                    <th>% Change (24h)</th>
+                </tr>
+            </thead>
+            <tbody id="cryptoTable"></tbody>
+        </table>
+        <script src="script.js"></script>
+    </body>
+</html>
